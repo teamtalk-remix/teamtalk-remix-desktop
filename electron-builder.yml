@@ -1,0 +1,32 @@
+appId: io.github.teamtalk-remix.teamtalk-remix-desktop
+productName: TeamTalk Remix
+artifactName: ${name}-${version}-${os}-${arch}.${ext}
+files:
+- "!**/src"
+- "!**/{tsconfig.json,tslint.json}"
+asar: true
+linux:
+  category: Office
+  target:
+  - dir
+  - AppImage
+  desktop:
+    Name: TeamTalk Remix
+mac:
+  category: public.app-category.productivity
+  target:
+  - dir
+  - dmg
+win:
+  target:
+  - target: zip
+    arch: [x64, ia32]
+  - target: nsis
+    arch: [x64, ia32]
+nsis:
+  artifactName: ${name}-setup-${version}.${ext}
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  displayLanguageSelector: false
+appx:
+  applicationId: TeamTalkRemix

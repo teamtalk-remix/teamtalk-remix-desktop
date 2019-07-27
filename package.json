@@ -1,0 +1,29 @@
+{
+  "name": "teamtalk-remix",
+  "version": "0.1.0",
+  "description": "Open-source cloud-native instant messaging system for organizations",
+  "author": "TeamTalk Remix Team",
+  "license": "AGPL-3.0-or-later",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run build && electron ./lib/main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "5.0.7",
+    "electron-builder": "^21.1.5",
+    "tslint": "5.18.0",
+    "typescript": "3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teamtalk-remix/teamtalk-remix-desktop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teamtalk-remix/teamtalk-remix-desktop/issues"
+  }
+}
